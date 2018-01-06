@@ -4,6 +4,7 @@ const initialState = {
   error: null,
   height: 400,
   id: null,
+  init: true,
   score: null,
   sentiment: null,
   success: false,
@@ -12,8 +13,6 @@ const initialState = {
   tone: null,
   waiting: false,
   width: 800,
-  init: true,
-  bubbleDiameter: 500,
 };
 
 export default function analyzer(state = initialState, action) {
@@ -32,11 +31,11 @@ export default function analyzer(state = initialState, action) {
       return {
         ...state,
         id: action.payload.id,
-        title: action.payload.title,
-        tone: action.payload.tone,
         score: action.payload.score,
         sentiment: action.payload.sentiment,
         summary: action.payload.summary,
+        title: action.payload.title,
+        tone: action.payload.tone,
       };
     case 'ANALYSIS_FULFILLED':
       return { ...state, success: true, waiting: false };

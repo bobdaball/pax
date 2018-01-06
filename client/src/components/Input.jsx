@@ -6,12 +6,12 @@ import InputText from './InputText.jsx';
 
 @connect((store) => {
   return {
-    analyzeUrl: store.analyzer.analyzeUrl,
     analyzeText: store.analyzer.analyzeText,
+    analyzeUrl: store.analyzer.analyzeUrl,
     input: store.analyzer.input,
     success: store.analyzer.success,
-    waiting: store.analyzer.waiting,
     visible: store.user.inputView,
+    waiting: store.analyzer.waiting,
   };
 }) export default class Input extends React.Component {
   textToggleHandle() {

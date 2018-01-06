@@ -13,19 +13,18 @@ const styles = {
 
 @connect((store) => {
   return {
-    login: store.user.login,
-    signup: store.user.signup,
-    username: store.user.username,
-    success: store.analyzer.success,
-    waiting: store.analyzer.waiting,
-    noSearchSoFar: store.analyzer.init,
-    dashboardView: store.user.dashboardView,
-    loginView: store.user.loginView,
-    inputView: store.user.inputView,
-    resultView: store.user.resultView,
-    waitingView: store.user.waitingView,
     aboutView: store.user.aboutView,
-
+    dashboardView: store.user.dashboardView,
+    inputView: store.user.inputView,
+    login: store.user.login,
+    loginView: store.user.loginView,
+    noSearchSoFar: store.analyzer.init,
+    resultView: store.user.resultView,
+    signup: store.user.signup,
+    success: store.analyzer.success,
+    username: store.user.username,
+    waiting: store.analyzer.waiting,
+    waitingView: store.user.waitingView,
   };
 }) export default class Nav extends React.Component {
   componentWillMount() {

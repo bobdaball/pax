@@ -7,9 +7,8 @@ import * as d3 from 'd3';
   return {
     height: store.analyzer.height,
     tone: store.analyzer.tone,
-    width: store.analyzer.width,
-    bubbleDiameter: store.analyzer.bubbleDiameter,
     upvoteAverages: store.user.upvoteAverages,
+    width: store.analyzer.width,
   };
 }) export default class BubbleChartUpvotes extends React.Component {
   drawChart() {
